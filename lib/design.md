@@ -73,6 +73,20 @@ music_history.add_track("there")
 curr_list = music_history.list_tracks()
 assert curr_list == ["So Easy", "hello", "Hi", "there"]
 
+"""
+Given non-string track
+Raises a type error
+"""
+music_history = MusicHistory()
+music_history.add_track(123) == "error: invalid type"
+
+"""
+Given an empty string
+Raises an exception
+"""
+music_history = MusicHistory()
+music_history.add_track("") == "empty track cannot be added"
+
 
 
 ```
